@@ -13,6 +13,7 @@ jobs:
     steps:
     - name: Display System Environment Variables
       run: |
+        echo "\t -- ALL GITHUB ACTION SYSTEM VARIABLES -- "
         echo "GITHUB_TOKEN: $GITHUB_TOKEN"
         echo "GITHUB_REPOSITORY: $GITHUB_REPOSITORY"
         echo "GITHUB_ACTOR: $GITHUB_ACTOR"
