@@ -27,3 +27,5 @@ jobs:
         echo "RUNNER_TEMP: $RUNNER_TEMP"
         echo "RUNNER_WORKSPACE: $RUNNER_WORKSPACE"
         echo "GITHUB_SERVER_URL: $GITHUB_SERVER_URL"
+        echo "REPO_NAME: ${{ github.event.repository.name }}"
+        
