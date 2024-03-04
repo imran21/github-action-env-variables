@@ -9,6 +9,8 @@ on:
 jobs:
   display-env-vars:
     runs-on: ubuntu-latest
+    env:
+      ACR_REPO_NAME: "coffeeshop"
 
     steps:
     - name: Display System Environment Variables
@@ -28,4 +30,9 @@ jobs:
         echo "RUNNER_WORKSPACE: $RUNNER_WORKSPACE"
         echo "GITHUB_SERVER_URL: $GITHUB_SERVER_URL"
         echo "REPO_NAME: ${{ github.event.repository.name }}"
+    - name: Set and print ACR_REPO_NAME
+      run: |
+        echo "ACR_REPO_NAME=${ACR_REPO_NAME}"
+        echo "${ACR_REPO_NAME}.azurecr.io"
+        echo "$ACR_REPO_NAME"
        
